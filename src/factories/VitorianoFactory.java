@@ -4,23 +4,23 @@ import interfaces.AbstractFactory;
 import interfaces.CadeiraInterface;
 import interfaces.MesaDeCentroInterface;
 import interfaces.SofaInterface;
-import interfaces.moderno.CadeiraModerna;
-import interfaces.moderno.MesaModerna;
-import interfaces.moderno.SofaModerno;
+import interfaces.vitoriano.CadeiraVitoriano;
+import interfaces.vitoriano.MesaVitoriano;
+import interfaces.vitoriano.SofaVitoriano;
 
-public class ModernoFactory implements AbstractFactory {
+public class VitorianoFactory implements AbstractFactory {
     @Override
     public CadeiraInterface criarCadeira() {
-        return new CadeiraModerna();
+        return new CadeiraVitoriano();
     }
 
     @Override
     public MesaDeCentroInterface criarMesaDeCentro() {
-        return new MesaModerna();
+        return new MesaVitoriano();
     }
 
     @Override
     public SofaInterface criarSofa() {
-        return new SofaModerno();
+        return new SofaVitoriano();
     }
 }
